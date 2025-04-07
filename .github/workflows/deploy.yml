@@ -1,19 +1,27 @@
 name: Deploy to GitHub Pages
 on:
   push:
-    branches: [master]  # 👈 Changed from 'main' to 'master'
+    branches: [master]
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:  # 👈 Add this permissions block
+      contents: write
+      pages: write
+      id-token: write
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Important for deployment
 
-      # Optional: Add build steps (e.g., npm run build)
-      # - run: npm install && npm run build
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: 'dist/'  # Your built files directory
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          publish_dir: ./dist  # Your built files folder
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+        uses: actions/deploy-pages@v2
