@@ -1377,7 +1377,7 @@ hr {
     @apply text-[#353f4f]
   }
   .navbar-light .wsmenu > .wsmenu-list > li > a.h-link {
-    @apply md:text-white lg:text-white xl:text-white sm:text-[#353f4f] xsm:text-[#353f4f]
+    @apply md:text-black lg:text-black xl:text-black sm:text-[#353f4f] xsm:text-[#444444]
   }
   .navbar-light .scroll .wsmenu > .wsmenu-list > li > a.h-link {
     @apply text-black

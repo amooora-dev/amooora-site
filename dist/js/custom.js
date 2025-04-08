@@ -120,7 +120,7 @@ $(document).ready(function () {
       patterns: {
         youtube: {
           index: 'youtube.com',
-          src: 'https://www.youtube.com/embed/SZEflIVnhH8',
+          src: 'https://www.youtube.com/embed/wMQ5UCZjloM',
         },
       },
     },
