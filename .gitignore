@@ -69,3 +69,21 @@ node_modules/
 .dataconnect
 .DS_Store
 yarn.lock
+
+# Dependency directories
+node_modules/
+
+# Lockfiles
+yarn.lock
+
+# Environment files
+.env
+.env.local
+
+# Mac system files
+.DS_Store
+
+# Editor directories
+.idea/
+.vscode/
+
