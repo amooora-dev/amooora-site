@@ -133,22 +133,28 @@
               <div class="overlapblackbg"></div>
               <ul class="wsmenu-list nav-theme">
                 <li class="nl-simple" aria-haspopup="true">
-                  <a href="#sobre" class="h-link">O que é Amooora?</a>
+                  <a href="#manifesto" class="h-link">Manifesto</a>
                 </li>
                 <li class="nl-simple" aria-haspopup="true">
-                  <a href="#manifesto" class="h-link">Manifesto</a>
+                  <a href="#aplicativo" class="h-link">Aplicativo</a>
                 </li>
                 <li class="nl-simple" aria-haspopup="true">
                   <a href="#conexoes" class="h-link">Conexões</a>
                 </li>
                 <li class="nl-simple" aria-haspopup="true">
-                  <a href="#grupos" class="h-link">Grupos</a>
+                  <a href="#saude" class="h-link">Saúde</a>
                 </li>
                 <li class="nl-simple" aria-haspopup="true">
                   <a href="#servicos" class="h-link">Serviços</a>
                 </li>
                 <li class="nl-simple" aria-haspopup="true">
                   <a href="#eventos" class="h-link">Eventos</a>
+                </li>
+                <li class="nl-simple" aria-haspopup="true">
+                  <a href="#estabelecimentos" class="h-link">Estabelecimentos</a>
+                </li>
+                <li class="nl-simple" aria-haspopup="true">
+                  <a href="#comunidades" class="h-link">Comunidades</a>
                 </li>
                 <li class="nl-simple" aria-haspopup="true">
                   <a
@@ -225,29 +231,17 @@
           </div>
 
           <!-- VÍDEO -->
-          <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)]">
-            <div class="flex-[0_0_auto] w-full max-w-[800px] px-[calc(0.5*_1.5rem)] mx-auto"> <!-- Added max-w and mx-auto -->
-              <div class="img-block text-center video-preview relative" style="max-width: 80%; margin: 0 auto;"> <!-- Added inline style -->
-                <!-- Play Icon - Scaled Down -->
-                <a class="video-popup1" href="https://www.youtube.com/embed/wMQ5UCZjloM">
-                  <div class="video-btn video-btn-xl w-[4rem] h-[4rem] mt-[-2rem] ml-[-2rem] md:w-16 md:h-16 md:mt-[-1.75rem] md:ml-[-1.75rem] absolute inline-block text-center rounded-[100%] left-2/4 top-2/4 before:content-[''] before:absolute before:left-[-3px] before:right-[-3px] before:top-[-3px] before:bottom-[-3px] before:opacity-0 before:[transition:all_400ms_ease-in-out] before:rounded-[50%] before:bg-[rgba(255,255,255,0.2)] group hover:before:opacity-75 hover:before:left-[-1rem] hover:before:right-[-1rem] hover:before:top-[-1rem] hover:before:bottom-[-1rem] bg--theme">
-                    <div class="video-block-wrapper [transition:all_400ms_ease-in-out] group-hover:scale-95">
-                      <span class="flaticon-play-button text-[1.5rem]"></span> <!-- Smaller icon -->
-                    </div>
-                  </div>
-                </a>
-                <!-- Preview Image -->
-                <img class="img-fluid inline-block rounded-xl w-full" src="images/artes/v0/1_colagem_relacio.jpg" alt="video-preview" />
-              </div>
-            </div>
-          </div>
+        <!-- YOUTUBE VIDEO WITHOUT IFRAME -->
+        <div id="youtube-player" style="max-width: 800px; margin: 0 auto;"></div>
+
         </div>
       </section>
+
 
       <!-- MANIFESTO SECTION -->
      <!-- CONEXÕES -->
      <section
-     id="conexoes"
+     id="manifesto"
      class="pt--100 py-[100px] lg:py-[80px] md:py-[70px] ct-01 content-section division">
      <div class="container">
        <!-- SECTION CONTENT (ROW) -->
@@ -287,11 +281,13 @@
          <div
            class="md:w-6/12 lg:w-6/12 xl:w-7/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full order-first order-md-2 md:order-2 lg:order-2 xl:order-2">
            <div
-             class="img-block text-center right-column ml-[30px] lg:ml-[5px] md:ml-0 sm:!mx-[3%] xsm:!m-[0_2%_35px]">
+             class="img-block text-center right-column ml-[30px] lg:ml-[5px] md:ml-0 sm:!mx-[3%] xsm:!m-[0_2%_35px]"
+             style="max-width: 85%; margin: 0 auto;">
              <img
                class="img-fluid rounded-lg"
                src="images/artes/final/apoooia_site.jpg"
-               alt="serviços" />
+               alt="serviços"
+               style="max-height: 800px; object-fit: contain;"/>
            </div>
          </div>
        </div>
@@ -303,7 +299,7 @@
 
       <!-- MI BREJO, SU BREJO -->
       <section
-        id="grupos"
+        id="aplicativo"
         class="bg--02 py--100 py-[100px] lg:py-[80px] md:py-[70px] ct-03 content-section division">
         <div class="container">
           <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)] items-center">
@@ -311,11 +307,13 @@
             <div
               class="md:w-6/12 lg:w-7/12 xl:w-7/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
               <div
-                class="img-block text-center left-column mr-[20px] lg:mr-[15px] md:mr-0 sm:mx-[3%] xsm:m-[0_2%_35px]">
+                class="img-block text-center left-column mr-[20px] lg:mr-[15px] md:mr-0 sm:mx-[3%] xsm:m-[0_2%_35px]"
+                style="max-width: 95%; margin: 0 auto;">
                 <img
                   class="img-fluid rounded-lg"
                   src="images/pessoas_roxo.jpg"
-                  alt="brejo" />
+                  alt="brejo"
+                  style="max-height: 950px; object-fit: contain;"/>
               </div>
             </div>
             <!-- TEXT BLOCK -->
@@ -350,12 +348,62 @@
                 <p>
                   Porque existem muitos brejos, e sempre vai ter um com a sua cara.
                   A Amooora oferece:
-
                 </p>
-                <a
-                  class="btn !rounded-[4px] btn--theme text-black hover--tra-white mt-5 uppercase !text-xs">
-                  Faça o pré-cadastro
-                </a>
+
+                <!-- Button Container -->
+                <div class="flex justify-center mt-12 w-full">  <!-- Changed to justify-center -->
+                  <div class="flex" style="gap: 24px;">
+                    <!-- Column 1 -->
+                    <div class="flex-1 space-y-6">
+                      <div class="flex justify-center">
+                        <a href="#saude" class="btn !rounded-[4px] btn--theme text-black hover--tra-white uppercase !text-xs text-center py-3" style="width: 200px;">
+                          Saúde
+                        </a>
+                      </div>
+                      <p class="h-4"></p>
+
+                      <div class="flex justify-center">
+                        <a href="#eventos" class="btn !rounded-[4px] btn--theme text-black hover--tra-white uppercase !text-xs text-center py-3" style="width: 200px;">
+                          Eventos
+                        </a>
+                      </div>
+                      <p class="h-4"></p>
+
+                      <div class="flex justify-center">
+                        <a href="#aplicativo" class="btn !rounded-[4px] btn--theme text-black hover--tra-white uppercase !text-xs text-center py-3" style="width: 200px;">
+                          Aplicativo
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="flex-1 space-y-6">
+                      <div class="flex justify-center">
+                        <a href="#servicos" class="btn !rounded-[4px] btn--theme text-black hover--tra-white uppercase !text-xs text-center py-3" style="width: 200px;">
+                          Serviços
+                        </a>
+                      </div>
+                      <p class="h-4"></p>
+
+                      <div class="flex justify-center">
+                        <a href="#estabelecimentos" class="btn !rounded-[4px] btn--theme text-black hover--tra-white uppercase !text-xs text-center py-3" style="width: 200px;">
+                          Estabelecimentos
+                        </a>
+                      </div>
+                      <p class="h-4"></p>
+
+                      <div class="flex justify-center">
+                        <a href="#comunidades" class="btn !rounded-[4px] btn--theme text-black hover--tra-white uppercase !text-xs text-center py-3" style="width: 200px;">
+                          Comunidades
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
               </div>
             </div>
             <!-- END TEXT BLOCK -->
@@ -367,8 +415,6 @@
       <!-- END MI BREJO, SU BREJO -->
 
 
-
-
       <!-- CONEXÕES -->
       <section
         id="conexoes"
@@ -378,7 +424,7 @@
           <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)] items-center">
             <!-- TEXT BLOCK -->
             <div
-              class="md:w-6/12 lg:w-6/12 xl:w-5/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full order-last order-md-2 md:order-2 lg:order-2 xl:order-2">
+              class="md:w-6/12 lg:w-6/12 xl:w-4/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full order-last order-md-2 md:order-2 lg:order-2 xl:order-2">
               <div class="txt-block left-column">
                 <!-- Section ID -->
                 <span
@@ -411,7 +457,7 @@
                 <img
                   class="img-fluid rounded-lg"
                   src="images/artes/v0/1_colagem_relacio.jpg"
-                  alt="serviços" />
+                  alt="serviços"/>
               </div>
             </div>
           </div>
@@ -423,7 +469,7 @@
 
       <!-- SAÚDE ÍNTIMA -->
       <section
-        id="grupos"
+        id="saude"
         class="bg--02 py--100 py-[100px] lg:py-[80px] md:py-[70px] ct-03 content-section division">
         <div class="container">
           <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)] items-center">
@@ -466,11 +512,6 @@
                   se escutar e se sentir bem no seu corpo.
                   Porque saúde íntima é direito, não tabu.
                 </p>
-
-                <a
-                  class="btn !rounded-[4px] btn--theme text-black hover--tra-white mt-5 uppercase !text-xs">
-                  Faça o pré-cadastro
-                </a>
               </div>
             </div>
             <!-- END TEXT BLOCK -->
@@ -541,7 +582,7 @@
 
         <!-- EVENTOS-->
         <section
-          id="grupos"
+          id="eventos"
           class="bg--02 py--100 py-[100px] lg:py-[80px] md:py-[70px] ct-03 content-section division">
           <div class="container">
             <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)] items-center">
@@ -593,7 +634,7 @@
 
         <!-- ESTABELECIMENTOS -->
         <section
-        id="conexoes"
+        id="estabelecimentos"
         class="pt--100 py-[100px] lg:py-[80px] md:py-[70px] ct-01 content-section division">
         <div class="container">
           <!-- SECTION CONTENT (ROW) -->
@@ -626,8 +667,6 @@
                   Procurando locais onde se sinta bem vinda e acolhida e ainda de quebra se divertir?
                   A Amooora é o lugar certo para você! Aqui você encontra estabelecimentos inclusivos
                   e avaliados pela nossa comunidade.
-
-
                 </p>
               </div>
             </div>
@@ -636,11 +675,13 @@
             <div
               class="md:w-6/12 lg:w-6/12 xl:w-7/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full order-first order-md-2 md:order-2 lg:order-2 xl:order-2">
               <div
-                class="img-block text-center right-column ml-[30px] lg:ml-[5px] md:ml-0 sm:!mx-[3%] xsm:!m-[0_2%_35px]">
+                class="img-block text-center right-column ml-[30px] lg:ml-[5px] md:ml-0 sm:!mx-[3%] xsm:!m-[0_2%_35px]"
+                style="max-width: 85%; margin: 0 auto;">
                 <img
                   class="img-fluid rounded-lg"
                   src="images/artes/final/contato.jpg"
-                  alt="serviços" />
+                  alt="serviços"
+                  style="max-height: 600px; object-fit: contain;"/>
               </div>
             </div>
           </div>
@@ -652,7 +693,7 @@
 
         <!-- COMUNIDADES-->
         <section
-          id="grupos"
+          id="comunidades"
           class="bg--02 py--100 py-[100px] lg:py-[80px] md:py-[70px] ct-03 content-section division">
           <div class="container">
             <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)] items-center">
@@ -666,7 +707,7 @@
                     class="img-fluid rounded-lg"
                     src="images/amoras.jpg"
                     alt="brejo"
-                    style="max-height: 400px; object-fit: contain;" />
+                    style="max-height: 500px; object-fit: contain;" />
                 </div>
               </div>
               <!-- TEXT BLOCK -->
@@ -1353,5 +1394,23 @@
 				 </script>
 				 -->
     <!-- <script defer src="js/styleswitch.js"></script> -->
+<!-- YOUTUBE PLAYER API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+      function onYouTubeIframeAPIReady() {
+        new YT.Player('youtube-player', {
+          videoId: 'PHO5TkLfpKg',
+          width: '100%',
+          height: '400',
+          playerVars: {
+            autoplay: 0,
+            controls: 1,
+            rel: 0
+          }
+        });
+      }
+    </script>
+
+
   </body>
 </html>
