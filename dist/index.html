@@ -139,7 +139,7 @@
                   <a href="#aplicativo" class="h-link">Aplicativo</a>
                 </li>
                 <li class="nl-simple" aria-haspopup="true">
-                  <a href="#valores" class="h-link">Valores</a>
+                  <a href="#valores" class="h-link">Nossos Valores</a>
                 </li>
                 <li class="nl-simple" aria-haspopup="true">
                   <a href="#produtos" class="h-link">Loja</a>
@@ -685,18 +685,16 @@
           <div class="container">
             <div class="flex flex-wrap mx-[calc(-0.5*_1.5rem)] items-center">
               <!-- IMAGE BLOCK -->
-              <div
-                class="md:w-6/12 lg:w-6/12 xl:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
-                <div
-                  class="img-block text-center left-column mr-[20px] lg:mr-[15px] md:mr-0 sm:mx-[3%] xsm:m-[0_2%_35px]"
-                  style="max-width: 85%; margin: 0 auto;">
-                  <img
-                    class="img-fluid rounded-lg"
-                    src="images/amoras.jpg"
-                    alt="brejo"
-                    style="max-height: 500px; object-fit: contain;" />
+              <!-- Na seção COMUNIDADES, substitua a div da imagem por: -->
+                <div class="md:w-6/12 lg:w-6/12 xl:w-6/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
+                  <div class="img-block text-center left-column mr-[20px] lg:mr-[15px] md:mr-0 sm:mx-auto xsm:mx-auto"
+                      style="max-width: 100%; padding: 20px 0;">
+                    <img class="img-fluid rounded-lg w-full h-auto object-contain"
+                        src="images/amoras.jpg"
+                        alt="brejo"
+                        style="max-height: 500px;" />
+                  </div>
                 </div>
-              </div>
               <!-- TEXT BLOCK -->
               <div
                 class="md:w-6/12 lg:w-5/12 xl:w-5/12 w-full flex-[0_0_auto] px-[calc(0.5*_1.5rem)] max-w-full">
@@ -1053,6 +1051,14 @@
                 <h5 class="s-22 w-700 font-bold text-white mb-[20px] leading-[1.35]">📣 Francielle — comunicação & papo reto com sotaque afetuoso</h5>
                 <p>Lésbica, preta e tagarela com PhD em palavras que abraçam.<br>Cuida da linguagem como quem cuida de gente.<br>Para ela, comunicação boa é aquela que dá match com o coração.</p>
               </div>
+              <div class="question mb--35 mb-[35px]">
+                <h5 class="s-22 w-700 font-bold text-white mb-[20px] leading-[1.35]"> 💻 Camila Monteiro - Desenvolvedora raíz </h5>
+                <p>Aliada e a favor da causa, faz parte do time de tecnologia.<br>Como boa nerd é introspectiva.<br>Mas acredita que tem muito para contribuir pro grupo e para as mulheres.</p>
+              </div>
+              <div class="question mb--35 mb-[35px]">
+                <h5 class="s-22 w-700 font-bold text-white mb-[20px] leading-[1.35]">🧿 Carol Pontara - Desenvolvedora para toda obra</h5>
+                <p>Transforma café em código e ideias em interfaces incríveis.<br>Especialista em criar experiências que unem tecnologia e afeto.<br>Acredita que design e código podem construir espaços mais inclusivos.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -1156,7 +1162,7 @@
                   </li>
                   <li class="w-auto block align-top clear-none m-0 p-0">
                     <p class="font-normal mb-[10px] md:mb-[8px]">
-                      <a href="#valores" class="h-link">Valores</a>
+                      <a href="#valores" class="h-link">Nossos Valores</a>
                     </p>
                   </li>
                   <li class="w-auto block align-top clear-none m-0 p-0">
@@ -1352,7 +1358,37 @@
         });
       }
     </script>
-
+<style>/* Ajustes para mobile */
+  @media (max-width: 768px) {
+    /* Espaçamento entre imagens e texto */
+    .img-block {
+      margin: 20px 0 !important;
+      padding: 0 10px !important;
+    }
+    
+    /* Texto não grudado nas imagens */
+    .txt-block p, .txt-block div {
+      margin-top: 15px !important;
+      margin-bottom: 15px !important;
+    }
+    
+    /* Seções com mais espaço */
+    section {
+      padding: 50px 0 !important;
+    }
+    
+    /* Imagens ocupando largura total */
+    .img-fluid {
+      width: 100% !important;
+      height: auto !important;
+      max-height: none !important;
+    }
+    
+    /* Ajuste específico para a seção de valores */
+    #valores .space-y-6 > div {
+      margin-bottom: 25px !important;
+    }
+  }</style>
 
   </body>
 </html>
