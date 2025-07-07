@@ -1,9 +1,11 @@
 import { Menu as MenuIcon, X } from "lucide-react";
 import { useState } from "react";
+
 import logoBranco from "../../../assets/images/logo-branco.png";
 import logoRoxo from "../../../assets/images/logo-roxa-amoooora.png";
 import logoVioleta from "../../../assets/images/logo-violeta.png";
 import logoColor from "../../../assets/images/logo.color.png";
+
 import { cn } from "../../utils/cn";
 import useMobile from "../../utils/useMobile";
 import { useTheme } from "../../utils/useTheme";
@@ -48,7 +50,7 @@ const Header = () => {
             {showMenu ? <X /> : <MenuIcon />}
           </button>
         </div>
-        <Menu show={showMenu} />
+        <Menu show={showMenu} setShow={setShowMenu} />
       </header>
     );
   }
@@ -57,8 +59,10 @@ const Header = () => {
     <header
       id='inicio'
       className={cn(
-        "w-full shadow",
-        isLightTheme ? "shadow-gray-800/8" : "shadow-white/8"
+        "w-full shadow sticky top-0 z-50",
+        isLightTheme
+          ? "shadow-gray-800/8 bg-white"
+          : "shadow-white/8 bg-zinc-900"
       )}
     >
       <div
@@ -76,7 +80,6 @@ const Header = () => {
       </div>
     </header>
   );
-
 };
 
 export default Header;

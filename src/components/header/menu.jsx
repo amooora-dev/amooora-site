@@ -2,6 +2,7 @@ import { Moon, Sun } from "lucide-react";
 import { cn } from "../../utils/cn";
 import useMobile from "../../utils/useMobile";
 import { useTheme } from "../../utils/useTheme";
+import { useEffect, useRef } from "react";
 
 const links = [
   { href: "#manifesto", label: "Manifesto" },
@@ -14,6 +15,7 @@ const links = [
 
 const Menu = ({ show = true, setShow = null }) => {
   const { theme, setTheme } = useTheme();
+  const menuRef = useRef(null)
   const isMobile = useMobile();
   const isLightTheme = theme === "light";
 
@@ -31,8 +33,23 @@ const Menu = ({ show = true, setShow = null }) => {
     });
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        if (isMobile && setShow) {
+          setShow(false);
+        }
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+  }, [])
+
   return (
     <nav
+      ref={menuRef}
       className={cn(
         "absolute top-0 right-0 md:transform-none md:static flex flex-col md:flex-row md:items-center md:justify-between md:w-[70%] w-[80%] p-4 transition-transform duration-300 ease-in-out z-50 h-full",
         isMobile && "shadow-lg",
