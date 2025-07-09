@@ -3,12 +3,16 @@ import Header from "./components/header";
 import Loading from "./components/loading";
 import CookiesToast from "./components/toast";
 import ThemeProvider from "./utils/themeProvider";
+import Hero from "./components/hero";
+import Intro from "./components/intro";
 
 function App() {
   return (
     <ThemeProvider>
       <Suspense fallback={<Loading />}>
         <Header />
+        <Hero />
+        <Intro />
         {/* <CookiesToast /> */}
       </Suspense>
     </ThemeProvider>

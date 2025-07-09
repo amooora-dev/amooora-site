@@ -57,7 +57,7 @@ const Menu = ({ show = true, setShow = null }) => {
           ? "bg-white shadow-zinc-800/8"
           : "bg-zinc-900 shadow-white/8",
         isMobile &&
-          (show ? "transform -translate-x-0" : "transform translate-x-100")
+          (show ? "transform -translate-x-0" : "transform translate-x-200")
       )}
     >
       <ul className='grow flex flex-col md:flex-row md:items-center md:justify-between md:w-auto w-full p-4'>
