@@ -6,6 +6,7 @@ import ThemeProvider from "./utils/themeProvider";
 import Hero from "./components/hero";
 import Intro from "./components/intro";
 import Manifesto from "./components/manifesto";
+import AppIntro from "./components/app";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Hero />
         <Intro />
         <Manifesto />
+        <AppIntro />
         {/* <CookiesToast /> */}
       </Suspense>
     </ThemeProvider>
