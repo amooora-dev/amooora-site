@@ -7,6 +7,7 @@ import Loading from "./components/loading";
 import Manifesto from "./components/manifesto";
 import ThemeProvider from "./utils/themeProvider";
 import Values from "./components/values";
+import Store from "./components/store";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Manifesto />
         <AppIntro />
         <Values />
+        <Store />
         {/* <CookiesToast /> */}
       </Suspense>
     </ThemeProvider>
