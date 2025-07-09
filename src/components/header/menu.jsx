@@ -3,6 +3,7 @@ import { cn } from "../../utils/cn";
 import useMobile from "../../utils/useMobile";
 import { useTheme } from "../../utils/useTheme";
 import { useEffect, useRef } from "react";
+import s from './header.module.css';
 
 const links = [
   { href: "#manifesto", label: "Manifesto" },
@@ -57,7 +58,7 @@ const Menu = ({ show = true, setShow = null }) => {
           ? "bg-white shadow-zinc-800/8"
           : "bg-zinc-900 shadow-white/8",
         isMobile &&
-          (show ? "transform -translate-x-0" : "transform translate-x-200")
+          (show ? `${s.show} visible` : `${s.hide} hidden`)
       )}
     >
       <ul className='grow flex flex-col md:flex-row md:items-center md:justify-between md:w-auto w-full p-4'>
