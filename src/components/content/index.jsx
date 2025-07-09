@@ -38,7 +38,7 @@ const Content = ({
           </p>
           <h2
             className={cn(
-              "text-[2.5rem] font-bold tracking-[-0.5px] mb-3",
+              "text-[2.3rem] font-bold tracking-[-0.5px] mb-3",
               isLightTheme ? "text-slate-800" : "text-slate-200"
             )}
           >

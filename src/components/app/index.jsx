@@ -1,31 +1,47 @@
+import { useState } from "react";
 import pessoas from "../../../assets/images/pessoas_roxo.jpg";
 import Content from "../content";
+import Communities from "./communities";
+import Connections from "./connections";
+import Establishment from "./establishment";
+import Events from "./events";
+import Health from "./health";
+import Services from "./service";
 
 const buttons = [
   {
-    href: "#saude",
+    id: "saude",
     label: "Saúde",
   },
   {
-    href: "#eventos",
+    id: "eventos",
     label: "Eventos",
   },
   {
-    href: "#aplicativo",
-    label: "Aplicativo",
+    id: "conexoes",
+    label: "Conexões",
   },
   {
-    href: "#servicos",
+    id: "servicos",
     label: "Serviços",
   },
   {
-    href: "#estabelecimentos",
+    id: "estabelecimentos",
     label: "Estabelecimentos",
   },
   {
-    href: "#comunidades",
+    id: "comunidades",
     label: "Comunidades",
   },
+];
+
+const components = [
+  { id: "saude", comp: <Health /> },
+  { id: "eventos", comp: <Events /> },
+  { id: "conexoes", comp: <Connections /> },
+  { id: "servicos", comp: <Services /> },
+  { id: "estabelecimentos", comp: <Establishment /> },
+  { id: "comunidades", comp: <Communities /> },
 ];
 
 const paragraphs = [
@@ -44,33 +60,43 @@ const paragraphs = [
 ];
 
 const AppIntro = () => {
+  const [active, setActive] = useState(components[0]);
+
   return (
-    <Content
-      id='aplicativo'
-      upperTitle='UM APLICATIVO SÁFICO'
-      title='Mi brejo, su brejo'
-      paragraphs={paragraphs}
-      isImgLeft
-      img={{
-        src: pessoas,
-        alt: "brejo",
-        width: 388,
-        height: 436,
-      }}
-      extraContent={
-        <div className='flex flex-wrap items-center justify-center mt-4 mx-auto'>
+    <>
+      <Content
+        id='aplicativo'
+        upperTitle='UM APLICATIVO SÁFICO'
+        title='Mi brejo, su brejo'
+        paragraphs={paragraphs}
+        isImgLeft
+        img={{
+          src: pessoas,
+          alt: "brejo",
+          width: 388,
+          height: 436,
+        }}
+      />
+      <div>
+        <div className='flex flex-wrap items-center justify-center mt-4 mx-auto max-w-[650px]'>
           {buttons.map((button, index) => (
-            <a
+            <button
               key={index}
-              href={button.href}
-              className='bg-[#932d6f] text-white px-4 py-2 rounded-lg shadow-md hover:opacity-80 transition-colors duration-300 mr-2 mb-2 w-[200px] uppercase font-semibold text-center'
+              className='bg-[#932d6f] text-white px-4 py-2 rounded-lg shadow-md hover:opacity-80 transition-colors duration-300 mr-2 mb-2 w-[200px] uppercase font-semibold text-center cursor-pointer'
+              onClick={() => {
+                const comp = components.find((c) => c.id === button.id);
+                if (comp) {
+                  setActive(comp);
+                }
+              }}
             >
               {button.label}
-            </a>
+            </button>
           ))}
         </div>
-      }
-    />
+        {active.comp}
+      </div>
+    </>
   );
 };
 
