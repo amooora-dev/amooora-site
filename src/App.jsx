@@ -8,6 +8,8 @@ import Intro from "./components/intro";
 import Manifesto from "./components/manifesto";
 import AppIntro from "./components/app";
 import Connections from "./components/connections";
+import Health from "./components/health";
+import Services from "./components/services";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Manifesto />
         <AppIntro />
         <Connections />
+        <Health />
+        <Services />
         {/* <CookiesToast /> */}
       </Suspense>
     </ThemeProvider>
