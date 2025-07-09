@@ -7,6 +7,7 @@ import Hero from "./components/hero";
 import Intro from "./components/intro";
 import Manifesto from "./components/manifesto";
 import AppIntro from "./components/app";
+import Connections from "./components/connections";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Intro />
         <Manifesto />
         <AppIntro />
+        <Connections />
         {/* <CookiesToast /> */}
       </Suspense>
     </ThemeProvider>
