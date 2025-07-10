@@ -244,7 +244,7 @@ const WhoAreWe = () => {
           <Slider {...settings}>
             {us.map((person, index) => (
               <div key={index}>
-                <div className='flex flex-col md:flex-row items-center justify-center gap-4 mb-4'>
+                <div className='flex flex-col md:flex-row items-center justify-center gap-4 mb-8 sm:mb-4'>
                   <img
                     src={person.img?.src || "https://picsum.photos/300"}
                     alt={person.img?.alt || `${person.name} profile`}

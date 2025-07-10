@@ -10,6 +10,7 @@ import Store from "./components/store";
 import Values from "./components/values";
 import ThemeProvider from "./utils/themeProvider";
 import WhoAreWe from "./components/whoAreWe";
+import Newsletter from "./components/newsletter";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Store />
         <Faq />
         <WhoAreWe />
+        <Newsletter />
         {/* <CookiesToast /> */}
       </Suspense>
     </ThemeProvider>
