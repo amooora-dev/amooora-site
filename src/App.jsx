@@ -9,6 +9,7 @@ import Manifesto from "./components/manifesto";
 import Store from "./components/store";
 import Values from "./components/values";
 import ThemeProvider from "./utils/themeProvider";
+import WhoAreWe from "./components/whoAreWe";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Values />
         <Store />
         <Faq />
+        <WhoAreWe />
         {/* <CookiesToast /> */}
       </Suspense>
     </ThemeProvider>
