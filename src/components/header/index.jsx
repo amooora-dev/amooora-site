@@ -6,6 +6,7 @@ import logoRoxo from "../../../assets/images/logo-roxa-amoooora.png";
 import logoVioleta from "../../../assets/images/logo-violeta.png";
 import logoColor from "../../../assets/images/logo.color.png";
 
+import { Link } from "react-router";
 import { cn } from "../../utils/cn";
 import useMobile from "../../utils/useMobile";
 import { useTheme } from "../../utils/useTheme";
@@ -70,12 +71,14 @@ const Header = () => {
           "container mx-auto w-full flex justify-between items-center"
         )}
       >
-        <img
-          src={isLightTheme ? logoColor : logoRoxo}
-          alt='Logo Amooora'
-          width={80}
-          height={80}
-        />
+        <Link to='/'>
+          <img
+            src={isLightTheme ? logoColor : logoRoxo}
+            alt='Logo Amooora'
+            width={80}
+            height={80}
+          />
+        </Link>
         <Menu />
       </div>
     </header>

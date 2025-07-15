@@ -6,7 +6,7 @@ const Hero = () => {
     <section
       id='hero'
       className={cn(
-        "bg-[url(../../../assets/images/amooora-hero.webp)] w-full bg-cover bg-center bg-scroll relative py-20 px-4"
+        "bg-[url(../../../assets/images/amooora-hero.webp)] w-full bg-cover bg-center bg-fixed relative py-26 px-4"
       )}
     >
       <div className='container flex flex-col mx-auto items-center justify-center h-full'>

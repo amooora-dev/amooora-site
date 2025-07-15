@@ -15,9 +15,9 @@ const Content = ({
 
   return (
     <section id={id} className='py-10 px-3 md:px-0'>
-      <div className='container flex flex-col items-center justify-between gap-8 md:flex-row mx-auto relative'>
+      <div className={cn('container flex items-center justify-between gap-8 md:flex-row mx-auto relative', isImgLeft ? 'flex-col' : 'flex-col-reverse')}>
         {isImgLeft ? (
-          <div className='self-stretch min-w-[40%] w-[400px] md:static absolute left-0 top-0 opacity-40 md:opacity-100 max-w-full flex justify-center items-center'>
+          <div className='self-stretch min-w-[40%] w-[400px] max-w-full md:static'>
             <img
               className='rounded-lg shadow-lg'
               src={src}
@@ -57,7 +57,7 @@ const Content = ({
           {extraContent ? extraContent : null}
         </div>
         {!isImgLeft ? (
-          <div className='self-stretch min-w-[40%] w-[400px] md:static absolute right-0 top-0 opacity-40 md:opacity-100 max-w-full flex justify-center items-center'>
+          <div className='self-stretch min-w-[40%] w-[400px] md:static max-w-full'>
             <img
               className='rounded-lg shadow-lg'
               src={src}

@@ -38,7 +38,7 @@ const us = [
     job: "CFO, ou “Controla Finanças com Orgulho”",
     description: (
       <>
-        Aliada firme e fofa.
+        Simpatizante.
         <br />
         Garante que a Amooora siga viva, pulsante e com boleto em dia.
         <br />

@@ -54,7 +54,7 @@ const Footer = () => {
           </a>
 
           <Link
-            href='https://instagram.com/n.amooora'
+            to='https://instagram.com/n.amooora'
             className='flex gap-1 underline md:no-underline md:hover:underline'
           >
             <Instagram />
@@ -72,7 +72,7 @@ const Footer = () => {
             <span>Todos os direitos reservados</span>
           </p>
           <Link
-            href='/privacy'
+            to='/privacy'
             className='underline md:no-underline md:hover:underline'
           >
             Política de Privacidade
