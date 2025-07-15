@@ -1,4 +1,5 @@
 import { Instagram } from "lucide-react";
+import { Link } from "react-router";
 import logoBranco from "../../../assets/images/logo-branco.png";
 import logoVioleta from "../../../assets/images/logo-violeta.png";
 import { cn } from "../../utils/cn";
@@ -52,13 +53,13 @@ const Footer = () => {
             amooora@amooora.com.br
           </a>
 
-          <a
+          <Link
             href='https://instagram.com/n.amooora'
             className='flex gap-1 underline md:no-underline md:hover:underline'
           >
             <Instagram />
             <span>@n.amooora</span>
-          </a>
+          </Link>
         </div>
         <div
           className={cn(
@@ -66,16 +67,16 @@ const Footer = () => {
             isLightTheme ? "text-slate-800" : "text-slate-200"
           )}
         >
-          <p className="flex flex-col">
+          <p className='flex flex-col'>
             <span className='font-semibold'>&copy; 2025 Amooora.</span>{" "}
             <span>Todos os direitos reservados</span>
           </p>
-          <a
-            href='privacy.html'
+          <Link
+            href='/privacy'
             className='underline md:no-underline md:hover:underline'
           >
             Política de Privacidade
-          </a>
+          </Link>
         </div>
       </div>
     </footer>
