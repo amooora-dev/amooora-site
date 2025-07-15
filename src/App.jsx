@@ -1,16 +1,17 @@
 import { Suspense } from "react";
 import AppIntro from "./components/app";
 import Faq from "./components/faq";
+import Footer from "./components/footer";
 import Header from "./components/header";
 import Hero from "./components/hero";
 import Intro from "./components/intro";
 import Loading from "./components/loading";
 import Manifesto from "./components/manifesto";
+import Newsletter from "./components/newsletter";
 import Store from "./components/store";
 import Values from "./components/values";
-import ThemeProvider from "./utils/themeProvider";
 import WhoAreWe from "./components/whoAreWe";
-import Newsletter from "./components/newsletter";
+import ThemeProvider from "./utils/themeProvider";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Faq />
         <WhoAreWe />
         <Newsletter />
+        <Footer />
         {/* <CookiesToast /> */}
       </Suspense>
     </ThemeProvider>
