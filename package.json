@@ -2,12 +2,14 @@
   "name": "amooora",
   "version": "1.0.0",
   "description": "Amooora Site",
+  "homepage": "https://amooora-dev.github.io/amooora-site",
   "scripts": {
-    "deploy": "firebase deploy",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
@@ -18,6 +20,7 @@
     "eslint": "^9.29.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
+    "gh-pages": "^6.3.0",
     "globals": "^16.2.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^4.1.11",
