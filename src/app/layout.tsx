@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Amooora - Conexões e experiências lésbicas",
-  description: "Cansada de aplicativos que não te entendem? A Amooora foi criada por e para sapatonas! Conecte-se com outras mulheres incríveis, encontre seu crush, faça novas amigas e participe de eventos sáficos.",
+  title: "Um mundo inteiro de acolhimento e liberdade",
+  description: "Somos a plataforma referência para a comunidade sáfica. Chegamos para somar, criar e espalhar conteúdo, informação e serviços com a nossa cara — feitos por nós, para nós, do jeitinho que a nossa comunidade merece.",
 };
 
 export default function RootLayout({
