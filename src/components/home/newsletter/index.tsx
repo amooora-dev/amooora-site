@@ -1,11 +1,7 @@
 "use client";
 import { cn } from "@/utils/cn";
-import { useTheme } from "next-themes";
 
 const Newsletter = () => {
-  const { theme } = useTheme();
-  const isLightTheme = theme === "light";
-
   return (
     <section id='newsletter-1' className='py-4 px-3'>
       <div className='container mx-auto flex items-center justify-center flex-col md:flex-row'>

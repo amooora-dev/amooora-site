@@ -7,7 +7,10 @@ const nextConfig: NextConfig = {
       protocol: 'https',
       hostname: 'picsum.photos'
     }]
-  }
+  },
+  basePath: "/amooora-site",
+  output: "export",
+  reactStrictMode: true,
 };
 
 export default nextConfig;
