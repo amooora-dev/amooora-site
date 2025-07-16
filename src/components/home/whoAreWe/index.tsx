@@ -17,7 +17,7 @@ import { cn } from "@/utils/cn";
 
 const us = [
   {
-    name: "🌈 Nina",
+    name: "🌈 Nina Menezes Cunha",
     job: "CEO & fundadora",
     description: (
       <>
@@ -37,7 +37,7 @@ const us = [
     },
   },
   {
-    name: "💸 Solange",
+    name: "💸 Solange Leonel",
     job: "CFO, ou “Controla Finanças com Orgulho”",
     description: (
       <>
@@ -54,7 +54,7 @@ const us = [
     },
   },
   {
-    name: "🧬 Clarissa",
+    name: "🧬 Clarissa Rocha",
     job: "Cientista oficial da saúde íntima",
     description: (
       <>
@@ -71,11 +71,12 @@ const us = [
     },
   },
   {
-    name: "🎨 Maira",
+    name: "🎨 Maira Ornelas",
     job: "Design & UX",
     description: (
       <>
-        Lésbica nata, fada sensata do Figma e militante do espaçamento perfeito.
+        Lésbica nata, fada sensata do Figma e e militante do espaçamento
+        perfeito.
         <br />
         Transforma cuidado em layout e faz da navegação um abraço visual.
         <br />
@@ -88,7 +89,7 @@ const us = [
     },
   },
   {
-    name: "📸 Isabela",
+    name: "📸 Isabela Carvalho",
     job: "Audiovisual & close certo",
     description: (
       <>
@@ -103,7 +104,7 @@ const us = [
     },
   },
   {
-    name: "📣 Francielle",
+    name: "📣 Francielle Santos",
     job: "Comunicação & papo reto com sotaque afetuoso",
     description: (
       <>
@@ -111,12 +112,29 @@ const us = [
         <br />
         Cuida da linguagem como quem cuida de gente.
         <br />
-        Para ela, comunicação boa é aquela que dá match com o coração.
+        para ela, comunicação boa é aquela que dá match com o coração.
       </>
     ),
     img: {
       src: fran,
       alt: "Francielle, comunicação da Amooora",
+    },
+  },
+  {
+    name: "👩‍💻 Andrea de Lima",
+    job: "Fotografa & edita & escreve & comunica &...",
+    description: (
+      <>
+        Lésbica, psicóloga, vegana e &quot;mãe de pet&quot;, não podia ser outra coisa se
+        não sapatão. <br />
+        Abraçadora oficial do mundo, tem mil e uma utilidades.
+        <br />
+        Procura fazer da sua voz um megafone da causa LGBTQIA+.
+      </>
+    ),
+    img: {
+      src: andrea,
+      alt: "Andrea, fotógrafa, editora, escritora da Amooora",
     },
   },
   {
@@ -134,23 +152,6 @@ const us = [
     img: {
       src: camila,
       alt: "Camila Monteiro, desenvolvedora da Amooora",
-    },
-  },
-  {
-    name: "💻 Carol Pontara",
-    job: "Desenvolvedora para toda obra",
-    description: (
-      <>
-        Transforma café em código e ideias em interfaces incríveis.
-        <br />
-        Especialista em criar experiências que unem tecnologia e afeto.
-        <br />
-        Acredita que design e código podem construir espaços mais inclusivos.
-      </>
-    ),
-    img: {
-      src: "https://picsum.photos/200",
-      alt: "Carol Pontara, desenvolvedora da Amooora",
     },
   },
   {
@@ -174,21 +175,20 @@ const us = [
     },
   },
   {
-    name: "👩‍💻 Andrea",
-    job: "",
-    description: <></>,
-    img: {
-      src: andrea,
-      alt: "Andrea",
-    },
-  },
-  {
-    name: "👩‍💻 Maira Rossetti",
-    job: "",
-    description: <></>,
+    name: "👩‍💻 Maíra Rossétti",
+    job: "Publicitária de sensações e ideias taurinas",
+    description: (
+      <>
+        Lésbica.
+        <br /> Publicitária que se alimenta das suas ideias para criar projetos
+        e comunicação para pessoas e empresas, unida a uma taurina que está
+        tentando perder um pouco o controle.
+        <br /> Quer dizer, temos um pouco de tudo
+      </>
+    ),
     img: {
       src: mairaRo,
-      alt: "Maira Rossetti",
+      alt: "Maíra Rossétti, publicitária da Amooora",
     },
   },
 ];
