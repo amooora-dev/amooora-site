@@ -1,0 +1,7 @@
+.loading--theme .loader {
+  border-color: transparent #932d6f;
+}
+
+.loading--theme .loader::after {
+  border-color: transparent rgba(190, 108, 190, 0.15);
+}
