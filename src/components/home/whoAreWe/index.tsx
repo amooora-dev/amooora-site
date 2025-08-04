@@ -10,6 +10,7 @@ import debora from "@/assets/images/profile-pics/debora.jpg";
 import fran from "@/assets/images/profile-pics/fran.jpg";
 import isabela from "@/assets/images/profile-pics/isabela.jpg";
 import mairaRo from "@/assets/images/profile-pics/maira-rossetti.jpg";
+import mairaOr from "@/assets/images/profile-pics/maira-ornelas2.png";
 import nina from "@/assets/images/profile-pics/nina.jpg";
 import sol from "@/assets/images/profile-pics/sol.jpg";
 
@@ -84,7 +85,7 @@ const us = [
       </>
     ),
     img: {
-      src: "https://picsum.photos/200",
+      src: mairaOr,
       alt: "Maira, design & UX da Amooora",
     },
   },
