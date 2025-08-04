@@ -9,7 +9,7 @@ const Hero = () => {
     <section
       id='hero'
       className={cn(
-        "w-full bg-cover bg-center bg-fixed relative py-26 px-4",
+        "w-full bg-cover bg-center bg-fixed bg-no-repeat relative py-26 px-4",
         s.hero
       )}
     >

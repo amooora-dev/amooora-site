@@ -6,7 +6,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [{
       protocol: 'https',
       hostname: 'picsum.photos'
-    }]
+    }],
+    unoptimized: true
   },
   basePath: "/amooora-site",
   output: "export",

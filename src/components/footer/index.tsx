@@ -3,10 +3,10 @@ import { Instagram } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { cn } from "@/utils/cn";
-import { useTheme } from "next-themes";
 import logoBranco from "@/assets/images/logo-branco.png";
 import logoVioleta from "@/assets/images/logo-violeta.png";
+import { cn } from "@/utils/cn";
+import { useTheme } from "next-themes";
 
 const links = [
   { href: "#manifesto", text: "Manifesto" },
