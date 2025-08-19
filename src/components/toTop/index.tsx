@@ -1,10 +1,12 @@
 "use client";
 
+import useMobile from "@/utils/useMobile";
 import { ChevronUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const ToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const isMobile = useMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +17,8 @@ const ToTop = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  if (isMobile) return null;
 
   if (!isVisible) return null;
 

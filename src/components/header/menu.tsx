@@ -36,8 +36,10 @@ const Menu = ({
       setShow(false);
     }
     if (targetElement instanceof HTMLElement) {
+      const header = document.querySelector("header");
+      const headerHeight = header ? header.clientHeight : 0;
       window.scrollTo({
-        top: targetElement?.offsetTop - 60, // Adjust for fixed header height
+        top: targetElement?.offsetTop - headerHeight,
         behavior: "smooth",
       });
     }
