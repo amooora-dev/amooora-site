@@ -7,6 +7,7 @@ import Newsletter from "@/components/home/newsletter";
 import Store from "@/components/home/store";
 import Values from "@/components/home/values";
 import WhoAreWe from "@/components/home/whoAreWe";
+import ToTop from "@/components/toTop";
 
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
       <Faq />
       <WhoAreWe />
       <Newsletter />
+      <ToTop />
     </>
   );
 };
