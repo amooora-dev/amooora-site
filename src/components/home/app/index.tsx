@@ -1,5 +1,5 @@
 "use client";
-import { Suspense, useState } from "react";
+import { useState } from "react";
 
 import pessoas from "@/assets/images/pessoas_roxo.jpg";
 
@@ -12,7 +12,6 @@ import Establishment from "./establishment";
 import Events from "./events";
 import Health from "./health";
 import Services from "./service";
-import Loading from "@/components/loading";
 
 const buttons = [
   {
@@ -81,7 +80,7 @@ const AppIntro = () => {
 
   if (params.get("variant")) {
     return (
-      <Suspense fallback={<Loading />}>
+      <>
         <Content
           id='aplicativo'
           upperTitle='UM APLICATIVO SÁFICO'
@@ -94,33 +93,43 @@ const AppIntro = () => {
             width: 388,
             height: 436,
           }}
-          extraContent={
-            <ul className='pl-5 mt-4 flex flex-wrap gap-2'>
-              {features.map((feature, index) => (
-                <li
-                  key={index}
-                  className='flex items-center gap-2 w-[25%] font-semibold'
-                >
-                  <ChevronRight className='text-primary dark:text-primary-light' />
-                  {feature}
-                </li>
-              ))}
-            </ul>
-          }
         />
         <div>
-          {components.map(({ id, comp }) => (
-            <div key={id} id={id}>
-              {comp}
-            </div>
-          ))}
+          <div className='flex flex-wrap items-center justify-center mt-4 mx-auto max-w-[650px]'>
+            {buttons.map((button, index) => (
+              <button
+                key={index}
+                className='bg-primary text-white px-4 py-2 rounded-lg shadow-md hover:opacity-80 transition-colors duration-300 mr-2 mb-2 w-[200px] uppercase font-semibold text-center cursor-pointer'
+                onClick={() => {
+                  const comp = components.find((c) => c.id === button.id);
+                  if (comp) {
+                    setActive(comp);
+                  }
+                  const content = document.getElementById("app-content");
+                  const header = document.querySelector("header");
+                  const headerHeight = header ? header.offsetHeight : 0;
+                  if (content) {
+                    const contentTop =
+                      content.getBoundingClientRect().top + window.scrollY;
+                    window.scrollTo({
+                      top: contentTop - headerHeight,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+              >
+                {button.label}
+              </button>
+            ))}
+          </div>
+          <div id='app-content'>{active.comp}</div>
         </div>
-      </Suspense>
+      </>
     );
   }
 
   return (
-    <Suspense fallback={<Loading />}>
+    <>
       <Content
         id='aplicativo'
         upperTitle='UM APLICATIVO SÁFICO'
@@ -133,38 +142,28 @@ const AppIntro = () => {
           width: 388,
           height: 436,
         }}
+        extraContent={
+          <ul className='pl-5 mt-4 flex flex-wrap gap-2'>
+            {features.map((feature, index) => (
+              <li
+                key={index}
+                className='flex items-center gap-2 w-[25%] font-semibold'
+              >
+                <ChevronRight className='text-primary dark:text-primary-light' />
+                {feature}
+              </li>
+            ))}
+          </ul>
+        }
       />
       <div>
-        <div className='flex flex-wrap items-center justify-center mt-4 mx-auto max-w-[650px]'>
-          {buttons.map((button, index) => (
-            <button
-              key={index}
-              className='bg-primary text-white px-4 py-2 rounded-lg shadow-md hover:opacity-80 transition-colors duration-300 mr-2 mb-2 w-[200px] uppercase font-semibold text-center cursor-pointer'
-              onClick={() => {
-                const comp = components.find((c) => c.id === button.id);
-                if (comp) {
-                  setActive(comp);
-                }
-                const content = document.getElementById("app-content");
-                const header = document.querySelector("header");
-                const headerHeight = header ? header.offsetHeight : 0;
-                if (content) {
-                  const contentTop =
-                    content.getBoundingClientRect().top + window.scrollY;
-                  window.scrollTo({
-                    top: contentTop - headerHeight,
-                    behavior: "smooth",
-                  });
-                }
-              }}
-            >
-              {button.label}
-            </button>
-          ))}
-        </div>
-        <div id='app-content'>{active.comp}</div>
+        {components.map(({ id, comp }) => (
+          <div key={id} id={id}>
+            {comp}
+          </div>
+        ))}
       </div>
-    </Suspense>
+    </>
   );
 };
 
