@@ -20,7 +20,7 @@ const paragraphs = [
   </>,
 ];
 
-const Services = () => {
+const Services = ({ isImgLeft = false }) => {
   return (
     <Content
       id='servicos'
@@ -33,6 +33,7 @@ const Services = () => {
         width: 451,
         height: 254,
       }}
+      isImgLeft={isImgLeft}
     />
   );
 };

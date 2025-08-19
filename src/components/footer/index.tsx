@@ -25,7 +25,7 @@ const Footer = () => {
     <footer className={cn("pt-8 px-4")}>
       <div
         className={cn(
-          "container border-t mx-auto py-8 flex flex-col gap-4 border-[#932D6F]/20 text-slate-800 dark:border-[#932D6F]/50 dark:text-slate-200"
+          "container border-t mx-auto py-8 flex flex-col gap-4 border-primary/20 text-slate-800 dark:border-primary/50 dark:text-slate-200"
         )}
       >
         <div className='flex w-full flex-col md:flex-row items-start md:items-stretch justify-between gap-8'>

@@ -16,7 +16,7 @@ const Newsletter = () => {
           <input
             type='email'
             className={cn(
-              "grow py-2 px-1 rounded-md border bg-transparent focus:outline-none focus:ring-2 focus:ring-[#932d6f]/12 focus:border-[#932d6f] w-full border-slate-300placeholder:text-slate-500 dark:border-slate-600 dark:placeholder:text-slate-400"
+              "grow py-2 px-1 rounded-md border bg-transparent focus:outline-none focus:ring-2 focus:ring-primary/12 focus:border-primary w-full border-slate-300placeholder:text-slate-500 dark:border-slate-600 dark:placeholder:text-slate-400"
             )}
             placeholder='Seu melhor email'
             required
@@ -24,7 +24,7 @@ const Newsletter = () => {
           />
           <button
             type='submit'
-            className='bg-[#932d6f] text-white px-4 py-2 rounded-lg shadow-md hover:opacity-80 transition-colors duration-300 text-nowrap uppercase font-semibold text-center cursor-pointer w-full md:w-fit'
+            className='bg-primary text-white px-4 py-2 rounded-lg shadow-md hover:opacity-80 transition-colors duration-300 text-nowrap uppercase font-semibold text-center cursor-pointer w-full md:w-fit'
           >
             Inscrever-se
           </button>

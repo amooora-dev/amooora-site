@@ -10,7 +10,7 @@ const paragraphs = [
                     Faça parte dos nossos grupos!`,
 ];
 
-const Communities = () => {
+const Communities = ({ isImgLeft = false }) => {
   return (
     <Content
       img={{
@@ -22,7 +22,7 @@ const Communities = () => {
       upperTitle='UM CANTINHO COM A SUA CARA'
       title='Comunidades'
       paragraphs={paragraphs}
-      isImgLeft
+      isImgLeft={isImgLeft}
     />
   );
 };

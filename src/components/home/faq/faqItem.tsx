@@ -18,7 +18,7 @@ const FaqItem = ({
   return (
     <div
       className={cn(
-        "mb-4 border-b-[0.4px] p-4 border-[#932D6F] dark:border-[#dca0c8]"
+        "mb-4 border-b-[0.4px] p-4 border-primary dark:border-primary-light"
       )}
     >
       <h2
@@ -31,17 +31,13 @@ const FaqItem = ({
           {item}. {question}
         </span>
         {isOpen ? (
-          <ChevronUp className="text-[#932D6F] dark:text-[#dca0c8]" />
+          <ChevronUp className='text-primary dark:text-primary-light' />
         ) : (
-          <ChevronDown className="text-[#932D6F] dark:text-[#dca0c8]" />
+          <ChevronDown className='text-primary dark:text-primary-light' />
         )}
       </h2>
       {isOpen ? (
-        <p
-          className={cn(
-            "mt-2 text-slate-600 dark:text-slate-300"
-          )}
-        >
+        <p className={cn("mt-2 text-slate-600 dark:text-slate-300")}>
           {answer}
         </p>
       ) : null}

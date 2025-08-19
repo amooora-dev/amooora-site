@@ -3,6 +3,8 @@ import { useState } from "react";
 
 import pessoas from "@/assets/images/pessoas_roxo.jpg";
 
+import { ChevronRight } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 import Content from "../content";
 import Communities from "./communities";
 import Connections from "./connections";
@@ -40,11 +42,20 @@ const buttons = [
 
 const components = [
   { id: "saude", comp: <Health /> },
-  { id: "eventos", comp: <Events /> },
+  { id: "eventos", comp: <Events isImgLeft /> },
   { id: "conexoes", comp: <Connections /> },
-  { id: "servicos", comp: <Services /> },
+  { id: "servicos", comp: <Services isImgLeft /> },
   { id: "estabelecimentos", comp: <Establishment /> },
-  { id: "comunidades", comp: <Communities /> },
+  { id: "comunidades", comp: <Communities isImgLeft /> },
+];
+
+const features = [
+  "Saúde",
+  "Eventos",
+  "Conexões",
+  "Serviços",
+  "Estabelecimentos",
+  "Comunidades",
 ];
 
 const paragraphs = [
@@ -64,6 +75,48 @@ const paragraphs = [
 
 const AppIntro = () => {
   const [active, setActive] = useState(components[0]);
+
+  const params = useSearchParams();
+
+  if (params.get("variant")) {
+    return (
+      <>
+        <Content
+          id='aplicativo'
+          upperTitle='UM APLICATIVO SÁFICO'
+          title='Mi brejo, su brejo'
+          paragraphs={paragraphs}
+          isImgLeft
+          img={{
+            src: pessoas,
+            alt: "brejo",
+            width: 388,
+            height: 436,
+          }}
+          extraContent={
+            <ul className='pl-5 mt-4 flex flex-wrap gap-2'>
+              {features.map((feature, index) => (
+                <li
+                  key={index}
+                  className='flex items-center gap-2 w-[25%] font-semibold'
+                >
+                  <ChevronRight className='text-primary dark:text-primary-light' />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          }
+        />
+        <div>
+          {components.map(({ id, comp }) => (
+            <div key={id} id={id}>
+              {comp}
+            </div>
+          ))}
+        </div>
+      </>
+    );
+  }
 
   return (
     <>
@@ -85,11 +138,22 @@ const AppIntro = () => {
           {buttons.map((button, index) => (
             <button
               key={index}
-              className='bg-[#932d6f] text-white px-4 py-2 rounded-lg shadow-md hover:opacity-80 transition-colors duration-300 mr-2 mb-2 w-[200px] uppercase font-semibold text-center cursor-pointer'
+              className='bg-primary text-white px-4 py-2 rounded-lg shadow-md hover:opacity-80 transition-colors duration-300 mr-2 mb-2 w-[200px] uppercase font-semibold text-center cursor-pointer'
               onClick={() => {
                 const comp = components.find((c) => c.id === button.id);
                 if (comp) {
                   setActive(comp);
+                }
+                const content = document.getElementById("app-content");
+                const header = document.querySelector("header");
+                const headerHeight = header ? header.offsetHeight : 0;
+                if (content) {
+                  const contentTop =
+                    content.getBoundingClientRect().top + window.scrollY;
+                  window.scrollTo({
+                    top: contentTop - headerHeight,
+                    behavior: "smooth",
+                  });
                 }
               }}
             >
@@ -97,7 +161,7 @@ const AppIntro = () => {
             </button>
           ))}
         </div>
-        {active.comp}
+        <div id='app-content'>{active.comp}</div>
       </div>
     </>
   );

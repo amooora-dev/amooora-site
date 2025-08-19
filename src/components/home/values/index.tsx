@@ -39,7 +39,7 @@ const values = [
 const Values = () => {
   return (
     <section id='valores' className='px-4 py-4'>
-      <div className='container rounded-3xl mx-auto p-2 bg-[#F1A890]'>
+      <div className='container rounded-3xl mx-auto p-2 bg-tertiary-light'>
         <h2 className='text-[2.3rem] font-bold text-center text-slate-800'>
           Nossos Valores
         </h2>

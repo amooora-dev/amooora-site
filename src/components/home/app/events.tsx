@@ -18,7 +18,7 @@ const paragraphs = [
   </>,
 ];
 
-const Events = () => {
+const Events = ({ isImgLeft = false }) => {
   return (
     <Content
       img={{
@@ -27,7 +27,7 @@ const Events = () => {
         width: 451,
         height: 254,
       }}
-      isImgLeft
+      isImgLeft={isImgLeft}
       upperTitle='VEM PRO ROLÊ'
       title='Eventos'
       paragraphs={paragraphs}
