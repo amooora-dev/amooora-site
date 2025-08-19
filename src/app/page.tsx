@@ -7,12 +7,14 @@ import Newsletter from "@/components/home/newsletter";
 import Store from "@/components/home/store";
 import Values from "@/components/home/values";
 import WhoAreWe from "@/components/home/whoAreWe";
+import Loading from "@/components/loading";
 import ToTop from "@/components/toTop";
+import { Suspense } from "react";
 
 
 const Home = () => {
   return (
-    <>
+    <Suspense fallback={<Loading />}>
       <Hero />
       <Intro />
       <Manifesto />
@@ -23,7 +25,7 @@ const Home = () => {
       <WhoAreWe />
       <Newsletter />
       <ToTop />
-    </>
+    </Suspense>
   );
 };
 
