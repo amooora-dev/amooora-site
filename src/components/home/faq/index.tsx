@@ -1,4 +1,3 @@
-
 import { cn } from "@/utils/cn";
 import FaqItem from "./faqItem";
 
@@ -62,7 +61,6 @@ const questions = [
 ];
 
 const Faq = () => {
-
   return (
     <section id='faq' className='px-3 py-4'>
       <div className='container mx-auto p-4'>
@@ -74,11 +72,7 @@ const Faq = () => {
           >
             Perguntas & Respostas
           </h2>
-          <p
-            className={cn(
-              "mb-2 font-semibold text-center"
-            )}
-          >
+          <p className={cn("mb-2 font-semibold text-center")}>
             Ficou com alguma dúvida? Veja as perguntas mais frequentes sobre a
             Amooora.
           </p>
@@ -98,7 +92,7 @@ const Faq = () => {
           Ainda tem dúvidas? <br />
           <a
             href='mailto:amooora@amooora.com.br'
-            className='text-[#932D6F] font-bold underline'
+            className='text-primary font-bold underline'
           >
             Envie sua dúvida pra gente
           </a>

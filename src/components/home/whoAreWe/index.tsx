@@ -3,16 +3,16 @@ import Image from "next/image";
 import { useState } from "react";
 import Slider, { Settings } from "react-slick";
 
-import andrea from "@/assets/images/profile-pics/andrea.jpg";
-import camila from "@/assets/images/profile-pics/camila.jpg";
-import clarissa from "@/assets/images/profile-pics/clarissa-rocha.jpg";
-import debora from "@/assets/images/profile-pics/debora.jpg";
-import fran from "@/assets/images/profile-pics/fran.jpg";
-import isabela from "@/assets/images/profile-pics/isabela.jpg";
-import mairaRo from "@/assets/images/profile-pics/maira-rossetti.jpg";
-import mairaOr from "@/assets/images/profile-pics/maira-ornelas2.png";
-import nina from "@/assets/images/profile-pics/nina.jpg";
-import sol from "@/assets/images/profile-pics/sol.jpg";
+import andrea from "@/assets/images/profile-pics/andrea.png";
+import camila from "@/assets/images/profile-pics/camila.png";
+import clarissa from "@/assets/images/profile-pics/clarissa-rocha.png";
+import debora from "@/assets/images/profile-pics/debora.png";
+import fran from "@/assets/images/profile-pics/fran.png";
+import isabela from "@/assets/images/profile-pics/isabela.png";
+import mairaOr from "@/assets/images/profile-pics/maira-ornelas.png";
+import mairaRo from "@/assets/images/profile-pics/maira-rossetti.png";
+import nina from "@/assets/images/profile-pics/nina.png";
+import sol from "@/assets/images/profile-pics/sol.png";
 
 import { cn } from "@/utils/cn";
 
@@ -126,8 +126,8 @@ const us = [
     job: "Fotografa & edita & escreve & comunica &...",
     description: (
       <>
-        Lésbica, psicóloga, vegana e &quot;mãe de pet&quot;, não podia ser outra coisa se
-        não sapatão. <br />
+        Lésbica, psicóloga, vegana e &quot;mãe de pet&quot;, não podia ser outra
+        coisa se não sapatão. <br />
         Abraçadora oficial do mundo, tem mil e uma utilidades.
         <br />
         Procura fazer da sua voz um megafone da causa LGBTQIA+.
@@ -208,8 +208,8 @@ const WhoAreWe = () => {
         className={cn(
           "rounded-full w-3 h-3 hover:opacity-80",
           i === activeIndex
-            ? "border-2 border-[#dca0c8] bg-[#932d6f]"
-            : "bg-[#DCA0C8]"
+            ? "border-2 border-primary-light bg-primary"
+            : "bg-primary-light"
         )}
       >
         &nbsp;
@@ -226,7 +226,7 @@ const WhoAreWe = () => {
   };
   return (
     <section id='quem-somos' className='py-4 px-3'>
-      <div className='container bg-[#932D6F] mx-auto rounded-3xl px-2 pt-2 pb-8'>
+      <div className='container bg-primary mx-auto rounded-3xl px-2 pt-2 pb-8'>
         <h2 className='text-[2.3rem] font-bold text-center text-slate-200'>
           Quem faz a Amooora?
         </h2>

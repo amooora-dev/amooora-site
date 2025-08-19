@@ -7,10 +7,10 @@ const paragraphs = [
   `Quer sabe sobre prazer? Prevenção de ISTs? Ou qualquer outro conteúdo relacionado à educação sexual e saúde intíma? Este espaço é para você se informar, se escutar e se sentir bem no seu corpo. Porque saúde íntima é direito, não tabu.`,
 ];
 
-const Health = () => {
+const Health = ({ isImgLeft = false }) => {
   return (
     <Content
-      isImgLeft
+      isImgLeft={isImgLeft}
       img={{
         src: astro,
         alt: "brejo",

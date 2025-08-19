@@ -19,7 +19,7 @@ const paragraphs = [
   </>,
 ];
 
-const Establishment = () => {
+const Establishment = ({ isImgLeft = false }) => {
   return (
     <Content
       img={{
@@ -32,6 +32,7 @@ const Establishment = () => {
       id='estabelecimentos'
       title='Estabelecimentos'
       paragraphs={paragraphs}
+      isImgLeft={isImgLeft}
     />
   );
 };

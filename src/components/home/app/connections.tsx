@@ -7,9 +7,10 @@ const paragraphs = [
   "Conexões reais, espontâneas e cheias de potencial. Bora descobrir quem tá por perto?",
 ];
 
-const Connections = () => {
+const Connections = ({ isImgLeft = false }) => {
   return (
     <Content
+      isImgLeft={isImgLeft}
       id='conexoes'
       upperTitle='CONEXÕES REAIS'
       title='Conexões'
