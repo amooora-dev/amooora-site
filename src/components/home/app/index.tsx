@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 
 import pessoas from "@/assets/images/pessoas_roxo.jpg";
 
@@ -12,6 +12,7 @@ import Establishment from "./establishment";
 import Events from "./events";
 import Health from "./health";
 import Services from "./service";
+import Loading from "@/components/loading";
 
 const buttons = [
   {
@@ -80,7 +81,7 @@ const AppIntro = () => {
 
   if (params.get("variant")) {
     return (
-      <>
+      <Suspense fallback={<Loading />}>
         <Content
           id='aplicativo'
           upperTitle='UM APLICATIVO SÁFICO'
@@ -114,12 +115,12 @@ const AppIntro = () => {
             </div>
           ))}
         </div>
-      </>
+      </Suspense>
     );
   }
 
   return (
-    <>
+    <Suspense fallback={<Loading />}>
       <Content
         id='aplicativo'
         upperTitle='UM APLICATIVO SÁFICO'
@@ -163,7 +164,7 @@ const AppIntro = () => {
         </div>
         <div id='app-content'>{active.comp}</div>
       </div>
-    </>
+    </Suspense>
   );
 };
 
