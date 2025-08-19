@@ -147,7 +147,7 @@ const AppIntro = () => {
             {features.map((feature, index) => (
               <li
                 key={index}
-                className='flex items-center gap-2 w-[25%] font-semibold'
+                className='flex items-center gap-2 w-full md:w-[25%] font-semibold'
               >
                 <ChevronRight className='text-primary dark:text-primary-light' />
                 {feature}
