@@ -3,16 +3,16 @@ import Image from "next/image";
 import { useState } from "react";
 import Slider, { Settings } from "react-slick";
 
-import andrea from "@/assets/images/profile-pics/andrea.jpg";
-import camila from "@/assets/images/profile-pics/camila.jpg";
-import clarissa from "@/assets/images/profile-pics/clarissa-rocha.jpg";
-import debora from "@/assets/images/profile-pics/debora.jpg";
-import fran from "@/assets/images/profile-pics/fran.jpg";
-import isabela from "@/assets/images/profile-pics/isabela.jpg";
-import mairaOr from "@/assets/images/profile-pics/maira-ornelas2.png";
-import mairaRo from "@/assets/images/profile-pics/maira-rossetti.jpg";
-import nina from "@/assets/images/profile-pics/nina.jpg";
-import sol from "@/assets/images/profile-pics/sol.jpg";
+import andrea from "@/assets/images/profile-pics/andrea.png";
+import camila from "@/assets/images/profile-pics/camila.png";
+import clarissa from "@/assets/images/profile-pics/clarissa-rocha.png";
+import debora from "@/assets/images/profile-pics/debora.png";
+import fran from "@/assets/images/profile-pics/fran.png";
+import isabela from "@/assets/images/profile-pics/isabela.png";
+import mairaOr from "@/assets/images/profile-pics/maira-ornelas.png";
+import mairaRo from "@/assets/images/profile-pics/maira-rossetti.png";
+import nina from "@/assets/images/profile-pics/nina.png";
+import sol from "@/assets/images/profile-pics/sol.png";
 
 import { cn } from "@/utils/cn";
 
