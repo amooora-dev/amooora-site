@@ -4,6 +4,7 @@ import { useState } from "react";
 import pessoas from "@/assets/images/pessoas_roxo.jpg";
 
 import { ChevronRight } from "lucide-react";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import Content from "../content";
 import Communities from "./communities";
@@ -50,12 +51,12 @@ const components = [
 ];
 
 const features = [
-  "Saúde",
-  "Eventos",
-  "Conexões",
-  "Serviços",
-  "Estabelecimentos",
-  "Comunidades",
+  { name: "Saúde", href: "#saude" },
+  { name: "Eventos", href: "#eventos" },
+  { name: "Conexões", href: "#conexoes" },
+  { name: "Serviços", href: "#servicos" },
+  { name: "Estabelecimentos", href: "#estabelecimentos" },
+  { name: "Comunidades", href: "#comunidades" },
 ];
 
 const paragraphs = [
@@ -95,7 +96,7 @@ const AppIntro = () => {
           }}
         />
         <div>
-          <div className='flex flex-wrap items-center justify-center mt-4 mx-auto max-w-[650px]'>
+          <div className='flex flex-wrap items-center justify-center mt-4 mx-auto max-w-[650px]' id="btn-container">
             {buttons.map((button, index) => (
               <button
                 key={index}
@@ -105,7 +106,7 @@ const AppIntro = () => {
                   if (comp) {
                     setActive(comp);
                   }
-                  const content = document.getElementById("app-content");
+                  const content = document.getElementById("btn-container");
                   const header = document.querySelector("header");
                   const headerHeight = header ? header.offsetHeight : 0;
                   if (content) {
@@ -144,13 +145,34 @@ const AppIntro = () => {
         }}
         extraContent={
           <ul className='pl-5 mt-4 flex flex-wrap gap-2'>
-            {features.map((feature, index) => (
+            {features.map((feature) => (
               <li
-                key={index}
+                key={feature.href}
                 className='flex items-center gap-2 w-full md:w-[25%] font-semibold'
               >
-                <ChevronRight className='text-primary dark:text-primary-light' />
-                {feature}
+                <Link
+                  href={feature.href}
+                  className="flex items-center gap-2 underline text-lg hover:text-primary dark:hover:text-primary-light transition-colors duration-300"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const content = document.getElementById(
+                      feature.href.replace("#", "")
+                    );
+                    const header = document.querySelector("header");
+                    const headerHeight = header ? header.offsetHeight : 0;
+                    if (content) {
+                      const contentTop =
+                        content.getBoundingClientRect().top + window.scrollY;
+                      window.scrollTo({
+                        top: contentTop - headerHeight,
+                        behavior: "smooth",
+                      });
+                    }
+                  }}
+                >
+                  <ChevronRight className='text-primary dark:text-primary-light' />
+                  {feature.name}
+                </Link>
               </li>
             ))}
           </ul>
