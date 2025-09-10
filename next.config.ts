@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     }],
     unoptimized: true
   },
-  basePath: "/amooora-site",
+  basePath: "",
   output: "export",
   reactStrictMode: true,
 };
