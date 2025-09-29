@@ -1,4 +1,5 @@
 "use client";
+import { newsletterService } from "@/backend/service/newsletter";
 import { cn } from "@/utils/cn";
 import { Loader2 } from "lucide-react";
 import { useState } from "react";
@@ -21,14 +22,7 @@ const Newsletter = () => {
       return;
     }
     setIsValid(true);
-    const res = await fetch("/api/newsletter", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email }),
-    });
-    const data = await res.json();
+    const data = await newsletterService.addEmail(email)
     if (data.success) {
       setIsSuccess(true);
       toast.success("Email cadastrado com sucesso!");
