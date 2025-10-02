@@ -11,8 +11,7 @@ import Loading from "@/components/loading";
 import ToTop from "@/components/toTop";
 import { Suspense } from "react";
 
-
-const Home = () => {
+const Home = async () => {
   return (
     <Suspense fallback={<Loading />}>
       <Hero />

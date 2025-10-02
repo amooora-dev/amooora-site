@@ -1,5 +1,5 @@
 "use client";
-import { newsletterService } from "@/backend/service/newsletter";
+import { addEmail } from "@/backend/service/newsletter";
 import { cn } from "@/utils/cn";
 import { Loader2 } from "lucide-react";
 import { useState } from "react";
@@ -22,13 +22,12 @@ const Newsletter = () => {
       return;
     }
     setIsValid(true);
-    const data = await newsletterService.addEmail(email)
-    if (data.success) {
-      setIsSuccess(true);
-      toast.success("Email cadastrado com sucesso!");
+    const { message, success } = await addEmail(email);
+    setIsSuccess(success);
+    if (success) {
+      toast.success(message);
     } else {
-      setIsSuccess(false);
-      toast.error(data.message || "Erro ao cadastrar email.");
+      toast.error(message);
     }
     setIsLoading(false);
     setEmail("");
