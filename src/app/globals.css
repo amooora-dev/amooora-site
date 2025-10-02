@@ -1,6 +1,9 @@
 @import "tailwindcss";
+
+@plugin "tailwindcss-animate";
 @tailwind utilities;
 @import "../utils/theme.css";
+@import "tw-animate-css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -8,7 +11,7 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
