@@ -1,8 +1,7 @@
-import { createClient } from "@/backend/connection/client";
 import { SupabaseClient } from "@supabase/supabase-js";
+import supabase from "../connection";
 
 export const addEmail = async (inputEmail: string) => {
-  const supabase = createClient();
   try {
     const { data: sessionData } = await supabase.auth.getSession();
 
@@ -42,7 +41,7 @@ class NewsletterService {
 
   private get supabase(): SupabaseClient {
     if (!this._supabase) {
-      this._supabase = createClient();
+      this._supabase = supabase;
     }
     return this._supabase;
   }
