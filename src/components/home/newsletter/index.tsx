@@ -22,7 +22,19 @@ const Newsletter = () => {
       return;
     }
     setIsValid(true);
-    const { message, success } = await addEmail(email);
+    const response = await fetch("/api/newsletter", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    });
+    if (!response.ok) {
+      toast.error("Houve um erro ao cadastrar o email. Tente novamente.");
+      setIsLoading(false);
+      return;
+    }
+    const { message, success } = await response.json();
     setIsSuccess(success);
     if (success) {
       toast.success(message);

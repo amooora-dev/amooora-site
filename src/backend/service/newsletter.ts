@@ -1,22 +1,11 @@
 import { SupabaseClient } from "@supabase/supabase-js";
-import supabase from "../connection";
+import supabaseFactory from "../connection";
+
+
+const supabase = supabaseFactory();
 
 export const addEmail = async (inputEmail: string) => {
   try {
-    const { data: sessionData } = await supabase.auth.getSession();
-
-    if (!sessionData.session) {
-      const { data: loginData, error: loginError } =
-        await supabase.auth.signInWithPassword({
-          email: process.env.NEXT_PUBLIC_SUPABASE_EMAIL!,
-          password: process.env.NEXT_PUBLIC_SUPABASE_PASSWORD!,
-        });
-      if (loginError) {
-        console.error("Erro ao autenticar usuário: ", loginError);
-        return { message: "Erro de autenticação", success: false, data: null };
-      }
-      console.log("Usuário autenticado:", loginData.user.email);
-    }
 
     const { data, error } = await supabase
       .from("emails")
@@ -60,21 +49,6 @@ class NewsletterService {
 
   addEmail = async (inputEmail: string) => {
     try {
-      const { data: sessionData } = await this.supabase.auth.getSession();
-
-      if (!sessionData.session) {
-        const { data: loginData, error: loginError } =
-          await this.supabase.auth.signInWithPassword({
-            email: process.env.NEXT_PUBLIC_SUPABASE_EMAIL!,
-            password: process.env.NEXT_PUBLIC_SUPABASE_PASSWORD!,
-          });
-
-        if (loginError) {
-          console.error("Erro ao autenticar usuário: ", loginError);
-          return { message: "Erro de autenticação", success: false };
-        }
-        console.log("Usuário autenticado:", loginData.user.email);
-      }
 
       const emailExists = await this.getEmail(inputEmail);
       if (emailExists) {
