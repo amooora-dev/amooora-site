@@ -10,7 +10,6 @@ const nextConfig: NextConfig = {
     unoptimized: true
   },
   basePath: "",
-  output: "export",
   reactStrictMode: true,
 };
 
