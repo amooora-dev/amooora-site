@@ -1,5 +1,4 @@
 "use client";
-import { addEmail } from "@/backend/service/newsletter";
 import { cn } from "@/utils/cn";
 import { Loader2 } from "lucide-react";
 import { useState } from "react";
@@ -22,27 +21,28 @@ const Newsletter = () => {
       return;
     }
     setIsValid(true);
-    const response = await fetch("/api/newsletter", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email }),
-    });
-    if (!response.ok) {
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+      const { message, success } = await response.json();
+      setIsSuccess(success);
+      if (success) {
+        toast.success(message);
+      } else {
+        toast.error(message);
+      }
+      setEmail("");
+    } catch (error) {
+      console.error("Error submitting email:", error);
       toast.error("Houve um erro ao cadastrar o email. Tente novamente.");
+    } finally {
       setIsLoading(false);
-      return;
     }
-    const { message, success } = await response.json();
-    setIsSuccess(success);
-    if (success) {
-      toast.success(message);
-    } else {
-      toast.error(message);
-    }
-    setIsLoading(false);
-    setEmail("");
   };
 
   return (

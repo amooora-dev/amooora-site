@@ -1,12 +1,10 @@
 import { SupabaseClient } from "@supabase/supabase-js";
 import supabaseFactory from "../connection";
 
-
 const supabase = supabaseFactory();
 
 export const addEmail = async (inputEmail: string) => {
   try {
-
     const { data, error } = await supabase
       .from("emails")
       .insert({ email: inputEmail })
@@ -15,7 +13,18 @@ export const addEmail = async (inputEmail: string) => {
 
     if (error) {
       console.error("Erro ao adicionar email: ", error);
-      return { message: "Erro ao adicionar email", success: false, data: null };
+      console.log("Error code:", typeof error.code);
+      return error.code === "23505"
+        ? {
+            message: "Email já cadastrado",
+            success: false,
+            data: null,
+          }
+        : {
+            message: "Houve um erro ao cadastrar o email. Tente novamente.",
+            success: false,
+            data: null,
+          };
     }
 
     return { message: "Email adicionado com sucesso", success: true, data };
@@ -49,7 +58,6 @@ class NewsletterService {
 
   addEmail = async (inputEmail: string) => {
     try {
-
       const emailExists = await this.getEmail(inputEmail);
       if (emailExists) {
         return { message: "Email já cadastrado", success: false };
