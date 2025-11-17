@@ -13,7 +13,6 @@ export const addEmail = async (inputEmail: string) => {
 
     if (error) {
       console.error("Erro ao adicionar email: ", error);
-      console.log("Error code:", typeof error.code);
       return error.code === "23505"
         ? {
             message: "Email já cadastrado",
